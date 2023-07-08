@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Build Image') {
             steps {
-                //sh 'docker build -t ebowsaa/jenkinstest ./pushdockerimage/' (this will use the tag latest)
+                //sh 'sudo docker build -t ebowsaa/jenkinstest ./pushdockerimage/' (this will use the tag latest)
 		sh 'docker build -t ebowsaah/jenkinstest:$BUILD_NUMBER ./pushdockerimage/'
             }
         }
